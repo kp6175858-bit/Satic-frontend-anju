@@ -1,2 +1,3 @@
 # Satic-frontend-anju
-This repository contains frontend projects build during the satic frontend internship showcasing daily deployed work.
+Build a reusable primary button component and deploy it live using the same repository and live
+link
