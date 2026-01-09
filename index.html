@@ -1,16 +1,51 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Day 1 Frontend Task</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SATIC</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-  <h1>Hello 👋</h1>
-  <p>This is my Day 1 Frontend Task for Satic Internship.</p>
+  <!-- NAVBAR -->
+  <header class="navbar">
 
-  <script src="js/script.js"></script>
+    <div class="logo">SATIC</div>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" id="hamburger">☰</div>
+
+    <!-- Navigation Menu -->
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+  </header>
+
+  <!-- PAGE CONTENT -->
+<main class="content">
+
+  <!-- SEARCH BAR -->
+  <form id="search-form" class="search-bar">
+    <input
+      type="text"
+      id="search-input"
+      placeholder="Search..."
+      aria-label="Search"
+    />
+    <button type="submit" id="search-btn">🔍</button>
+  </form>
+
+  <p>Scroll the page. Background scroll will stop when menu is open.</p>
+  <p style="margin-top: 900px;">End of page</p>
+
+</main>
+
+  <script src="./script.js"></script>
 </body>
-</html>
+    </html>
