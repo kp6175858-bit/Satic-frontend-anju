@@ -2,38 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Frontend Internship</title>
-  <link rel="Stylesheet" href="Style.css">
+  <title>Day 3 - Desktop Navbar</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <h2 class="logo">SATIC</h2>
+  <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">LOGO</div>
 
-    <div class="search-box">
-      <input 
-        type="text" 
-        id="searchInput"
-        placeholder="Search..."
-        aria-label="Search input"
-      >
-      <button id="searchBtn" aria-label="Search button">🔍</button>
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- Buttons -->
+    <div class="nav-buttons">
+      <button class="primary-btn">Get Started</button>
+      <button class="disabled-btn" disabled>Disabled</button>
     </div>
-  </header>
+  </nav>
 
-  <!-- Content -->
-  <main class="content">
-    <h1>Frontend Internship</h1>
-    <h2>Day-5 Task Completed</h2>
-
-    <p><strong>Name:</strong>pal anju </p>
-    <p>This website is deployed using GitHub Pages.
-    </p><script src="Script.js"></script>
-
-
-    <div class="btn-group"></div>
-      <button class="primary-btn">Send</button>
-      <button class="primary-btn" disabled>Disabled</button>
-    </body>
-    </html>
+</body>
+</html>
