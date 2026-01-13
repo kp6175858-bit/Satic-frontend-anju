@@ -36,6 +36,51 @@
     .btn.primary { background: #1366d6; color: white; }
     .btn.primary:disabled { opacity: 0.5; cursor: not-allowed; }
 
+<html lang="en">
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="logo">LOGO</div>
+  <div class="menu">&#9776;</div>
+</header>
+
+<!-- Search Bar -->
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search..." />
+  <button onclick="searchCard()">🔍</button>
+</div>
+
+<!-- Buttons -->
+<div class="btn-group">
+  <button class="success" onclick="showSuccess()">Show Success</button>
+  <button class="error" onclick="showError()">Show Error</button>
+</div>
+
+<!-- Cards -->
+<section class="card-container" id="cards">
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" />
+    <h2>UI & UX Design</h2>
+    <p>UI/UX designer focused on intuitive and user-centered designs.</p>
+    <button>Explore</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" />
+    <h2>Responsive Design</h2>
+    <p>Layouts that adapt perfectly to all screen sizes.</p>
+    <button>Explore</button>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" />
+    <h2>Frontend Development</h2>
+    <p>Crafting responsive and modern web interfaces.</p>
+    <button>Explore</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
     /* Desktop nav (visible on wide screens) */
     nav.primary-nav {
       display: none;
