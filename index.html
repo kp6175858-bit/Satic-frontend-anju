@@ -1,1 +1,36 @@
-<! DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notification Banner - Day 7</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Notification Banner -->
+<div id="notification" class="notification hidden">
+  <span id="notification-text"></span>
+  <button class="close-btn" onclick="hideNotification()">×</button>
+</div>
+
+<!-- Page Content (Cards) -->
+<div class="container">
+
+  <div class="card">
+    <h2>Success Card</h2>
+    <p>Show success notification banner.</p>
+    <button class="btn success" onclick="showSuccess()">Show Success</button>
+  </div>
+
+  <div class="card">
+    <h2>Error Card</h2>
+    <p>Show error notification banner.</p>
+    <button class="btn error" onclick="showError()">Show Error</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
