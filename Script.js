@@ -1,36 +1,18 @@
-const searchForm = document.getElementById("search-form");
-const searchInput = document.getElementById("search-input");
+const notification = document.getElementById("notification");
+const text = document.getElementById("notification-text");
 
-searchForm.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const value = searchInput.value.trim();
-
-  if (value === "") {
-    alert("Please enter something to search.");
-    return;
-  }
-
-  console.log("Search value:", value);
-});
 function showSuccess() {
-  alert("✅ Success Message Shown!");
+  notification.className = "notification success";
+  text.innerText = "✅ Success! Action completed successfully.";
+  notification.classList.remove("hidden");
 }
 
 function showError() {
-  alert("❌ Error Message Shown!");
+  notification.className = "notification error";
+  text.innerText = "❌ Error! Something went wrong.";
+  notification.classList.remove("hidden");
 }
 
-function searchCard() {
-  let input = document.getElementById("searchInput").value.toLowerCase();
-  let cards = document.querySelectorAll(".card");
-
-  cards.forEach(card => {
-    let title = card.querySelector("h2").innerText.toLowerCase();
-    if (title.includes(input)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  });
+function hideNotification() {
+  notification.classList.add("hidden");
 }
