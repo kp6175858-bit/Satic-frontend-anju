@@ -1,32 +1,49 @@
-/* Hamburger fuction */
-let menuList = document.getElementById("menuList")
-menuList.style.maxHeight = "0px";
+/* ===== Day 4: Mobile Menu ===== */
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.classList.toggle("open");
 
-function toggleMenu(){
-    if(menuList.style.maxHeight == "0px"){
-        menuList.style.maxHeight = "300px";
-    }
-    else{
-        menuList.style.maxHeight = "0px"
-    }
+  document.body.style.overflow =
+    menu.classList.contains("open") ? "hidden" : "auto";
 }
 
-/* Notification banner */
-  const notification = document.getElementById("notification");
-    const message = document.getElementById("message");
+/* Close menu on link click */
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("navMenu").classList.remove("open");
+    document.body.style.overflow = "auto";
+  });
+});
 
-    function showSuccess() {
-      notification.className = "notification success";
-      message.textContent = "✅ Operation completed successfully!";
-      notification.style.display = "flex";
-    }
 
-    function showError() {
-      notification.className = "notification error";
-      message.textContent = "❌ Something went wrong. Please try again.";
-      notification.style.display = "flex";
-    }
+/* ===== Day 5: Search Handling ===== */
+function handleSearch(event) {
+  event.preventDefault();
+  const input = event.target.querySelector("input");
 
-    function hideNotification() {
-      notification.style.display = "none";
-    }
+  if (input.value.trim() === "") {
+    alert("Please enter a search term");
+    return;
+  }
+
+  alert("Searching for: " + input.value);
+  input.value = "";
+}
+
+/* ===== Day 7: Notification ===== */
+const notification = document.getElementById("notification");
+const message = document.getElementById("message");
+
+function showSuccess() {
+  message.textContent = "Success! Task deployed successfully.";
+  notification.className = "notification success";
+}
+
+function showError() {
+  message.textContent = "Error! Something went wrong.";
+  notification.className = "notification error";
+}
+
+function dismiss() {
+  notification.classList.add("hidden");
+}
