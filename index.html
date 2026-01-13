@@ -3,23 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Day 7 – Notification Banner</title>
+  <title>Day 7</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo"> 
+      <h1>LOGO</h1>
+    </div>
+    <ul id="menuList">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Product</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>   
 
-  <!-- Notification Banner -->
+    <!-- Hamburger -->
+    <div class="menu-icon">
+      <button class="btn" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <!-- Searching Bar -->
+    <section class="search-section">
+      <form id="searchForm" class="search-form">
+        <input type="text" id="searchInput" placeholder="Search...">
+          <button type="submit">🔍</button>
+      </form>
+    </section>
+
+    <!-- Intro -->
+   <main class="center">
+    <h1>Frontend Internship</h1><br>
+    <h2>Day-7 Task Completed</h2><br>
+    <p>Name: <strong>Unnati</strong></p><br>
+    <p>This website is deployed using GitHub Pages.</p><br>
+
+    <button class="primary-btn">Send</button>
+    <button class="primary-btn" disabled>Disabled</button>
+   </main>
+
+   <!-- === Notification banner === -->
   <div id="notification" class="notification">
     <span id="message"></span>
-    <button class="close" onclick="hideNotification()">✕</button>
+    <button class="close-btn" onclick="hideNotification()">×</button>
   </div>
 
-  <div class="content">
-    <h2>Day 7 – Notification Banner</h2>
-    <button class="btn success" onclick="showSuccess()">Show Success</button>
-    <button class="btn error" onclick="showError()">Show Error</button>
-  </div>
+  <button class="action" onclick="showSuccess()">Show Success</button>
+  <button class="actions" onclick="showError()">Show Error</button>
 
+  <!-- Resuable Card Component -->
+  <section class="card-section">
+  <h2 class="card-title">Reusable Card Component</h2>
+
+  <div class="card-container">
+
+    <div class="card">
+      <img src="https://media.licdn.com/dms/image/v2/D5612AQFfhTEictqBHA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1721174916441?e=2147483647&v=beta&t=IqnGNJxS4J-yaL4rgLBlx-cbNAbFwpEMCRvkkLXsR48" alt="Card Image">
+      <div class="card-content">
+        <h3>Frontend Development</h3>
+        <p>Frontend developer with a strong eye for design and experience in crafting clean, responsive, and intuitive user experiences.</p>
+        <button>Explore</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://www.datocms-assets.com/22695/1751327552-1735313241-ui-vs-ux.webp" alt="Card Image">
+      <div class="card-content">
+        <h3>UI and UX Components</h3>
+        <p>UI/UX designer focused on creating intuitive, user-centered designs that deliver seamless and engaging digital experiences.</p>
+        <button>Explore</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://www.andacademy.com/resources/wp-content/uploads/2025/05/inner_2e.webp" alt="Card Image">
+      <div class="card-content">
+        <h3>Responsive Design</h3>
+        <p>Responsive design creates flexible layouts that look and work perfectly on mobiles, tablets, and desktops.</p>
+        <button>Explore</button>
+      </div>
+    </div>
+  </div> 
+  </section>
+  
   <script src="script.js"></script>
 </body>
 </html>
