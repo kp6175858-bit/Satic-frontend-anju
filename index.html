@@ -1,94 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Day 7</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Internship Demo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <nav>
-    <div class="logo"> 
-      <h1>LOGO</h1>
-    </div>
-    <ul id="menuList">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Product</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>   
+	
 
-    <!-- Hamburger -->
-    <div class="menu-icon">
-      <button class="btn" onclick="toggleMenu()">☰</button>
-    </div>
-  </nav>
+  <!--Day 3 & 4-->
+  <header class="navbar">
+    <div class="logo">LOGO</div>
 
-  <!-- Searching Bar -->
-    <section class="search-section">
-      <form id="searchForm" class="search-form">
-        <input type="text" id="searchInput" placeholder="Search...">
-          <button type="submit">🔍</button>
+    <nav id="navMenu" class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#">Tasks</a>
+      <a href="#">Contact</a>
+      <button class="btn primary-btn">Login</button>
+    </nav>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <main class="container">
+
+    <!--Day 2-->
+    <section>
+      <h2>Day 2 – Reusable Button</h2>
+      <button class="btn primary-btn">Primary Button</button>
+      <button class="btn primary-btn" disabled>Disabled Button</button>
+    </section>
+
+    <!--Day 5-->
+    <section>
+      <h2>Day 5 – Search Bar</h2>
+      <form class="search-bar" onsubmit="handleSearch(event)">
+        <input type="text" placeholder="Search..." aria-label="Search" />
+        <button type="submit">🔍</button>
       </form>
     </section>
 
-    <!-- Intro -->
-   <main class="center">
-    <h1>Frontend Internship</h1><br>
-    <h2>Day-7 Task Completed</h2><br>
-    <p>Name: <strong>Unnati</strong></p><br>
-    <p>This website is deployed using GitHub Pages.</p><br>
+<!--Day 7-->
+  <div id="notification" class="notification hidden">
+  <span id="message"></span>
+  <button onclick="dismiss()">✖</button>
+</div>
 
-    <button class="primary-btn">Send</button>
-    <button class="primary-btn" disabled>Disabled</button>
-   </main>
+<div class="container">
+  <h2>Day 7 – Notification Banner</h2>
+  <button class="btn success-btn" onclick="showSuccess()">Show Success</button>
+  <button class="btn error-btn" onclick="showError()">Show Error</button>
+</div>
 
-   <!-- === Notification banner === -->
-  <div id="notification" class="notification">
-    <span id="message"></span>
-    <button class="close-btn" onclick="hideNotification()">×</button>
-  </div>
+    <!--Day 6-->
+    <section>
+      <h2>Day 6 – Cards</h2>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-img">
+		<img src="https://picsum.photos/400/250?random=1" alt="Card image">
+	</div>
+          <h3>Card Title</h3>
+          <p>This is a reusable card component.</p>
+          <button class="btn primary-btn">Action</button>
+        </div>
 
-  <button class="action" onclick="showSuccess()">Show Success</button>
-  <button class="actions" onclick="showError()">Show Error</button>
+        <div class="card">
+          <div class="card-img">
+	<img src="https://picsum.photos/400/250?random=2" alt="Card image">
+		</div>
+          <h3>Another Card</h3>
+          <p>Cards maintain equal height automatically.</p>
+          <button class="btn primary-btn">Action</button>
+        </div>
 
-  <!-- Resuable Card Component -->
-  <section class="card-section">
-  <h2 class="card-title">Reusable Card Component</h2>
-
-  <div class="card-container">
-
-    <div class="card">
-      <img src="https://media.licdn.com/dms/image/v2/D5612AQFfhTEictqBHA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1721174916441?e=2147483647&v=beta&t=IqnGNJxS4J-yaL4rgLBlx-cbNAbFwpEMCRvkkLXsR48" alt="Card Image">
-      <div class="card-content">
-        <h3>Frontend Development</h3>
-        <p>Frontend developer with a strong eye for design and experience in crafting clean, responsive, and intuitive user experiences.</p>
-        <button>Explore</button>
+        <div class="card">
+          <div class="card-img">
+	<img src="https://picsum.photos/400/250?random=3" alt="Card image">
+		
+	</div>
+          <h3>Responsive Card</h3>
+          <p>Layout adapts to screen size.</p>
+          <button class="btn primary-btn">Action</button>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <img src="https://www.datocms-assets.com/22695/1751327552-1735313241-ui-vs-ux.webp" alt="Card Image">
-      <div class="card-content">
-        <h3>UI and UX Components</h3>
-        <p>UI/UX designer focused on creating intuitive, user-centered designs that deliver seamless and engaging digital experiences.</p>
-        <button>Explore</button>
-      </div>
-    </div>
+  </main>
 
-    <div class="card">
-      <img src="https://www.andacademy.com/resources/wp-content/uploads/2025/05/inner_2e.webp" alt="Card Image">
-      <div class="card-content">
-        <h3>Responsive Design</h3>
-        <p>Responsive design creates flexible layouts that look and work perfectly on mobiles, tablets, and desktops.</p>
-        <button>Explore</button>
-      </div>
-    </div>
-  </div> 
-  </section>
-  
   <script src="script.js"></script>
 </body>
-</html>
+      </html>
