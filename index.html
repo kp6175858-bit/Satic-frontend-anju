@@ -86,7 +86,33 @@
         </div>
       </div>
     </section>
+<!-- Day 8 -->
+<section>
+  <h2>Day 8 - Form Input & Submit</h2>
 
+  <form id="task8Form" novalidate>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        placeholder="Enter username"
+      />
+      <small class="error-text" id="errorMsg">
+        Username is required
+      </small>
+    </div>
+
+    <button
+      type="submit"
+      id="submitBtn"
+      class="btn primary-btn"
+      disabled
+    >
+      Submit
+    </button>
+  </form>
+	  </section>
   </main>
 
   <script src="script.js"></script>
