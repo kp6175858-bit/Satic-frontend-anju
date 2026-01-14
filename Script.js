@@ -29,19 +29,20 @@ function handleSearch(event) {
   alert("Searching for: " + input.value);
   input.value = "";
 }
-
 /* ===== Day 7: Notification ===== */
 const notification = document.getElementById("notification");
 const message = document.getElementById("message");
 
 function showSuccess() {
-  message.textContent = "Success! Task deployed successfully.";
-  notification.className = "notification success";
+  message.textContent = "✅ Success! Task deployed successfully.";
+  notification.classList.remove("hidden", "error");
+  notification.classList.add("success");
 }
 
 function showError() {
-  message.textContent = "Error! Something went wrong.";
-  notification.className = "notification error";
+  message.textContent = "❌ Error! Something went wrong.";
+  notification.classList.remove("hidden", "success");
+  notification.classList.add("error");
 }
 
 function dismiss() {
