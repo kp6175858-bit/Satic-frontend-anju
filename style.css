@@ -221,3 +221,36 @@ body {
   color: #fff;
   cursor: pointer;
 }
+/* Day 8 Form Styles */
+.form-group {
+  max-width: 400px;
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group input.error {
+  border-color: #e74c3c;
+}
+
+.error-text {
+  color: #e74c3c;
+  font-size: 12px;
+  display: none;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+                             }
