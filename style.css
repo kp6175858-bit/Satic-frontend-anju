@@ -252,5 +252,56 @@ body {
 
 button:disabled {
   opacity: 0.5;
-  cursor: not-allowed;
-                             }
+  cursor: not-allowed;}
+  /* Page wrapper for sticky footer */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #0f172a;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 20px;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-box h3 {
+  margin-bottom: 10px;
+}
+
+.footer-box a {
+  color: #cbd5f5;
+  text-decoration: none;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.footer-box a:hover {
+  color: #ffffff;
+}
+
+/* Responsive stacking */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-box {
+    margin-bottom: 20px;
+  }
+}                           
