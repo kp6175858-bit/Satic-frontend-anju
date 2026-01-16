@@ -305,3 +305,54 @@ main {
     margin-bottom: 20px;
   }
 }                           
+/* Premium Go To Top Button */
+#goTopBtn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  /* Premium Look */
+  background: linear-gradient(135deg, #6366f1, #2563eb);
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+  backdrop-filter: blur(6px);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Hover Effect */
+#goTopBtn:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.6);
+}
+
+/* Show Animation */
+#goTopBtn.show {
+  display: flex;
+  animation: fadeInUp 0.4s ease;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  }
