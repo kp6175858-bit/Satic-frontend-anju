@@ -79,3 +79,20 @@ form.addEventListener("submit", (e) => {
     submitBtn.disabled = true;
   }
 });
+// Premium Go To Top Button
+const goTopBtn = document.getElementById("goTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 350) {
+    goTopBtn.classList.add("show");
+  } else {
+    goTopBtn.classList.remove("show");
+  }
+});
+
+goTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
